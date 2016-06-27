@@ -48,5 +48,9 @@ TEST (MathUtilTest, atan2) {
   ASSERT_DOUBLE_EQ(std::atan2(-1,1), MathUtil::atan2(-1,1));
 }
 
+TEST (MathUtilTest, log) {
+ASSERT_DOUBLE_EQ(std::log(53.51089851859078), MathUtil::log(53.51089851859078));
+}
+
 }
   // namespace bdm

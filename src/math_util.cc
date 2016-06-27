@@ -49,4 +49,8 @@ double MathUtil::atan2(double y, double x) {
   }
 }
 
+double MathUtil::log(double d) {
+  return log_rn(d);
+}
+
 }  // namespace bdm

@@ -6,6 +6,7 @@ echo ${TRAVIS_OS_NAME}
 if [ "$TRAVIS_OS_NAME" = "osx" ]; then
   brew update
   brew install doxygen
+  brew install valgrind
   brew outdated gcc || brew upgrade gcc
 fi
 
