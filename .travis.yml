@@ -2,10 +2,11 @@ language: cpp
 sudo: required
 dist: trusty
 os:
-  - linux
-#  - osx
+#  - linux
+  - osx
 compiler:
-  - gcc
+#  - gcc
+  - clang
 script:
   - travis_wait 30 ./travis.sh
 

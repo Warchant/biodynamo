@@ -18,13 +18,6 @@
 
 namespace bdm {
 
-TEST (Math, exp) {
-  double x = -0.0028724514195400627;
-  double result = exp(x);
-  double expected = 0.99713167012178527;
-  ASSERT_EQ(expected, result);
-}
-
 TEST (Random, all) {
   Random::setSeed(1L);
   ASSERT_TRUE(std::abs(0.7308781907032908 - Random::nextDouble()) < 1e-20);
@@ -75,9 +68,9 @@ TEST_F (SmallNetworkTest, simulation) {
   run();
 }
 
-//TEST_F (SomaClusteringTest, simulation) {
-//  run();
-//}
+TEST_F (SomaClusteringTest, simulation) {
+  run();
+}
 
 TEST_F (SomaRandomWalkModuleTest, simulation) {
   run();
