@@ -216,9 +216,16 @@ if (test)
 endif()
 
 #--------------------- build visualization projects ----------------------
-# BUILD SMALL NETWORK VISUALIZATION
-set(SMALL_NW_TEST small-network-viz)
-add_executable(${SMALL_NW_TEST} ${SOURCES} viz/small_network_visualization.cpp)
-target_include_directories(${SMALL_NW_TEST} PUBLIC include)
-target_link_libraries(${SMALL_NW_TEST} biodynamo)
-target_link_libraries(${SMALL_NW_TEST} ${ROOT_LIBRARIES})
+# build viz executable for small network test
+set(SMALL_NW_VIZ small-network-viz)
+add_executable(${SMALL_NW_VIZ} ${SOURCES} viz/small_network_visualization.cpp)
+target_include_directories(${SMALL_NW_VIZ} PUBLIC include)
+target_link_libraries(${SMALL_NW_VIZ} biodynamo)
+target_link_libraries(${SMALL_NW_VIZ} ${ROOT_LIBRARIES})
+
+# build viz executable for dividing cell test
+set(DIVIDING_CELL_VIZ dividing-cell-viz)
+add_executable(${DIVIDING_CELL_VIZ} ${SOURCES} viz/dividing-cell-viz.cpp)
+target_include_directories(${DIVIDING_CELL_VIZ} PUBLIC include)
+target_link_libraries(${DIVIDING_CELL_VIZ} biodynamo)
+target_link_libraries(${DIVIDING_CELL_VIZ} ${ROOT_LIBRARIES})
